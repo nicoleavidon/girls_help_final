@@ -1,3 +1,4 @@
+
 {% load staticfiles %}
 
 <!DOCTYPE html>
@@ -14,11 +15,11 @@
         document.getElementById("profileDropdown").classList.toggle("show");
       }</script>
 
-    <div class="topnav" id="myTopnav">
-    <a href="{% url 'home' %}" class="top-menu">Home</a>
-      <a href="/" class="top-menu">Feed</a>
-    <a href="#contact">Groups</a>
-    <a href="{% url 'faqs' %}" class="top-menu">FAQs </a>
+      <div class="topnav" id="myTopnav">
+        <a href="/" class="top-menu">Home</a>
+      <a href="{% url 'post_list' %}" class="top-menu">Feed</a>
+      <a href="#contact">Topics</a>
+      <a href="{% url 'faqs' %}" class="top-menu">FAQs </a>
 
     <div class="dropdown">
       <button onclick="showProfileDropdown()" class="dropbtn"><img src="{% static "pics/profileicon.png" %}" width="40" height="40"></button>

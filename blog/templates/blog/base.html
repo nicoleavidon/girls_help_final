@@ -1,3 +1,4 @@
+
 {% load staticfiles %}
 
 <!DOCTYPE html>
@@ -14,8 +15,8 @@
       }</script>
 
     <div class="topnav" id="myTopnav">
-    <a href="{% url 'home' %}" class="top-menu">Home</a>
-    <a href="/" class="top-menu">Feed</a>
+      <a href="/" class="top-menu">Home</a>
+    <a href="{% url 'post_list' %}" class="top-menu">Feed</a>
     <a href="#contact">Topics</a>
     <a href="{% url 'faqs' %}" class="top-menu">FAQs </a>
 
