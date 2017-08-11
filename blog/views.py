@@ -5,6 +5,7 @@ from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
 from django.shortcuts import redirect
 
+
 # Create your views here.
 
 def post_list(request):
@@ -43,12 +44,10 @@ def post_edit(request, pk):
     return render(request, 'blog/post_edit.html', {'form': form})
 
 def faqs(request):
-    print("it worked")
     return render(request, 'blog/faqs.html')
 
 def home(request):
-    print("it worked")
     return render(request, 'blog/home.html')
 
 def login(request):
-    return render(request, 'blog/login.html')
+    return render(request, 'registration/login.html')
