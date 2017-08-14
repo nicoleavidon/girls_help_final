@@ -1,9 +1,21 @@
 {% extends 'blog/base.html' %}
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
+<style>
+body {
+  font-family: 'Assistant';
+}
 
+</style>
+</head>
+<body>
 {% block content %}
-    <h1>New comment</h1>
+    <h1>Add a comment</h1>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Send</button>
+        <button type="submit" class="save btn btn-default">Comment</button>
     </form>
 {% endblock %}
+</body>
+</html>

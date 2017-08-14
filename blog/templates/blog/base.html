@@ -49,12 +49,14 @@
         background-color: #ffffff;
         margin-top: 0;
         padding: 20px 20px 20px 40px;
+        font-family: 'Assistant';
     }
 
     .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
         color: black;
         font-size: 36pt;
         text-decoration: none;
+        font-family: 'Assistant';
     }
 
     .content {
@@ -62,7 +64,7 @@
     }
 
     h1, h2, h3, h4 {
-        font-family: 'Lobster', cursive;
+        font-family: 'Assistant', cursive;
     }
 
     .date {
@@ -231,12 +233,13 @@
 
   <body>
     <div class="page-header">
-        <h1><a href="/">Girls Help</a></h1>
+        <h1><a href="{% url 'post_list' %}"><img id="titlepic" src="{% static "pics/titlepic.jpeg" %}" alt="Girls Help Title" width="300" height="200"/></a></h1>
         <div class="container">
 
         {% if user.is_authenticated %}
-        <a href="{% url 'post_new' %}" class="top-menu"><img src="http://www.free-icons-download.net/images/plus-sign-icon-27952.png" height="50" width="50"></a>
+
     {% endif %}
+<a href="{% url 'post_new' %}" class="top-menu"><img src="{% static "pics/plus.jpg" %}" height="200" width="250"></a>
   </div>
     <div class="content container">
         <div class="row">
