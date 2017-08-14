@@ -15,10 +15,10 @@
       }</script>
 
     <div class="topnav" id="myTopnav">
-      <a href="/" class="top-menu">Home</a>
-    <a href="{% url 'post_list' %}" class="top-menu">Feed</a>
+      <a href="/">Home</a>
+    <a href="{% url 'post_list' %}" >Feed</a>
     <a href="{% url 'topics' %}">Topics</a>
-    <a href="{% url 'faqs' %}" class="top-menu">FAQs </a>
+    <a href="{% url 'faqs' %}" >FAQs </a>
 
     <div class="dropdown">
       <button onclick="showProfileDropdown()" class="dropbtn"><img src="{% static "pics/profileicon.png" %}" width="40" height="40"></button>
@@ -30,8 +30,6 @@
             <p><a href="/login">Login</a></p>
             <p><a href="/register">Signup</a></p>
             {% endif %}
-      <a href="#">Create an account</a>
-      <a href="#">Log out</a>
     </div>
     </div>
 
@@ -40,7 +38,7 @@
     <style>
     h1 a {
         color: #FCA205;
-        font-family: 'Lobster';
+        font-family: 'Assistant';
     }
 
     body {
@@ -48,13 +46,13 @@
     }
 
     .page-header {
-        background-color: #ff9400;
+        background-color: #ffffff;
         margin-top: 0;
         padding: 20px 20px 20px 40px;
     }
 
     .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-        color: #ffffff;
+        color: black;
         font-size: 36pt;
         text-decoration: none;
     }
@@ -225,6 +223,9 @@
       color: white;
     }
 
+    .comment {
+        margin: 20px 0px 20px 20px;
+    }
     </style>
     </head>
 

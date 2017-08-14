@@ -16,10 +16,10 @@
       }</script>
 
       <div class="topnav" id="myTopnav">
-        <a href="/" class="top-menu">Home</a>
-      <a href="{% url 'post_list' %}" class="top-menu">Feed</a>
+        <a href="/">Home</a>
+      <a href="{% url 'post_list' %}" >Feed</a>
       <a href="{% url 'topics' %}">Topics</a>
-      <a href="{% url 'faqs' %}" class="top-menu">FAQs </a>
+      <a href="{% url 'faqs' %}">FAQs </a>
 
     <div class="dropdown">
       <button onclick="showProfileDropdown()" class="dropbtn"><img src="{% static "pics/profileicon.png" %}" width="40" height="40"></button>
@@ -31,8 +31,7 @@
             <p><a href="/login">Login</a></p>
             <p><a href="/register">Signup</a></p>
             {% endif %}
-      <a href="#">Create an account</a>
-      <a href="#">Log out</a>
+
     </div>
     </div>
 
@@ -98,7 +97,7 @@ h1, h2, h3, h4 {
 .topnav {
     overflow: hidden;
     background-color: black;
-    font-family: Arial;
+    font-family: 'Assistant';
 }
 
 .topnav a {
