@@ -51,3 +51,18 @@ def home(request):
 
 def login(request):
     return render(request, 'registration/login.html')
+
+def topics(request):
+    return render(request, 'blog/topics.html')
+
+def education(request):
+    return render(request, 'blog/education.html')
+
+def health(request):
+    return render(request, 'blog/health.html')
+
+def tech(request):
+    return render(request, 'blog/tech.html')
+
+def lifestyle(request):
+    return render(request, 'blog/lifestyle.html')

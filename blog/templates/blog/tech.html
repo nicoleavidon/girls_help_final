@@ -1,0 +1,38 @@
+
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Tech | Girls Help </title>
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel='shortcut icon' type='image/x-icon' href='{% static 'pics/ghicon.jpeg' %}' />
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <script> function showProfileDropdown() {
+        document.getElementById("profileDropdown").classList.toggle("show");
+      }</script>
+
+    <div class="topnav" id="myTopnav">
+      <a href="/" class="top-menu">Home</a>
+    <a href="{% url 'post_list' %}" class="top-menu">Feed</a>
+    <a href="{% url 'topics' %}">Topics</a>
+    <a href="{% url 'faqs' %}" class="top-menu">FAQs </a>
+
+    <div class="dropdown">
+      <button onclick="showProfileDropdown()" class="dropbtn"><img src="{% static "pics/profileicon.png" %}" width="40" height="40"></button>
+      <div class="dropdown-content" id="profileDropdown">
+        {% if user.is_authenticated %}
+            <p>welcome {{ user.username }}</p>
+            <p><a href="/logout">Logout</a></p>
+            {% else %}
+            <p><a href="/login">Login</a></p>
+            <p><a href="/register">Signup</a></p>
+            {% endif %}
+      <a href="#">Create an account</a>
+      <a href="#">Log out</a>
+    </div>
+    </div>
+
+    </div>
