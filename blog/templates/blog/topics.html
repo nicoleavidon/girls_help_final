@@ -13,14 +13,6 @@
     <script> function showProfileDropdown() {
         document.getElementById("profileDropdown").classList.toggle("show");
       }
-      function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
       </script>
 
     <div class="topnav" id="myTopnav">
@@ -28,7 +20,6 @@
     <a href="{% url 'post_list' %}" >Feed</a>
     <a href="{% url 'topics' %}">Topics</a>
     <a href="{% url 'faqs' %}" >FAQs </a>
-    <a>☰</a>
 
     <div class="dropdown">
       <button onclick="showProfileDropdown()" class="dropbtn"><img src="{% static "pics/profileicon.png" %}" width="40" height="40"></button>
@@ -92,29 +83,19 @@
 }
 
 .topnav {
-  background-color: #333;
-  overflow: hidden;
-
+    overflow: hidden;
+    background-color: black;
+    font-family: Arial;
 }
 
 .topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  font-family: Assistant;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav .icon {
-  display: none;
+    float: left;
+    font-size: 22px;
+    color: gray;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Assistant;
 }
 
 @media screen and (max-width: 1000px) {
@@ -248,7 +229,7 @@ h1 {
         /*margin-top: 20px;*/
         /*margin-left: auto;
         margin-right: auto;*/
-        padding-left: 900px;
+        padding-left: 800px;
     }
 
     .dropdown .dropbtn {
@@ -465,60 +446,112 @@ h1 {
       text-align: center;
       font-family: Assistant;
     }
+    #element1 {
+      display:inline-block; margin-right: 5px; align: center;
+    }
+    #element2 {
+      display:inline-block; align: center;
+    }
 
+
+.container {
+  position: relative;
+  width: 800px;
+  align:center;
+}
+
+.image {
+  display:inline-block;
+  width: 865px;
+  height: 720px;
+  border: 0;
+  margin: auto;
+  align: center
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: rgba(18,105,255,0.5);
+  opacity: 0;
+  width: 865px;
+  height: 720px;
+  transition: .5s ease;
+  filter: color-dodge;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  white-space: nowrap;
+  color: white;
+  font-size: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  font-family: Assistant;
+}
     </style>
     </head>
 <body>
 
 <div>
   <h1>Topics</h1>
-  <div>
-    <div>
-    <div>
+  <div id="element1">
+    <div id="lifestyle" class="container">
     <a href="{% url 'lifestyle' %}" target="_blank">
-      <img src="{% static "pics/Lifestyle.jpg" %}" alt="To Lifestyle Topic">
+      <img src="{% static "pics/Lifestyle.jpg" %}" alt="To Lifestyle Topic" height="720px" width="865px">
 
-      <div>
-        <div>Lifestyle</div>
+      <div class="overlay">
+        <div class="text">Lifestyle</div>
       </div>
     </a></div>
   </div>
 
-  </div>
 
-  <div>
+
+  <div id="element2">
+    <div id="health" class="container">
     <a href="{% url 'health' %}" target="_blank">
-      <img src="http://harvesthealthfoods.com/sites/default/files/Images/events/health-sign_0.jpg" alt="To Health Topic">
+      <img src="http://harvesthealthfoods.com/sites/default/files/Images/events/health-sign_0.jpg" alt="To Health Topic" height="720px" width="865px">
 
-      <div>
-        <div>Health</div>
+      <div class="overlay">
+        <div class="text">Health</div>
       </div>
     </a>
   </div>
+</div>
 
-
-  <div>
+  <div id="element1">
+    <div id="education" class="container">
     <a href="{% url 'education' %}" target="_blank">
-      <img src="http://bunkiechamber.net/sites/default/files/Education.jpg" alt="To Education Topic">
+      <img src="http://bunkiechamber.net/sites/default/files/Education.jpg" alt="To Education Topic" height="720px" width="865px">
 
-      <div>
-        <div>Education</div>
+      <div class="overlay">
+        <div class="text">Education</div>
       </div>
     </a>
   </div>
+</div>
 
-  <div>
+  <div id="element2">
+    <div id="tech" class="container">
     <a href="{% url 'tech' %}" target="_blank">
-      <img src="{% static "pics/Tech.jpg" %}" alt="To Technology Topic">
+      <img src="{% static "pics/Tech.jpg" %}" alt="To Technology Topic" height="720px" width="865px">
 
-      <div>
-      <div>Technology</div>
+      <div class="overlay">
+      <div class="text">Technology</div>
     </div>
     </a>
   </div>
 
 </div>
 
-
-</div>
 </body>

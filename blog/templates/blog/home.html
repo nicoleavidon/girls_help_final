@@ -22,7 +22,7 @@
       <a href="{% url 'faqs' %}">FAQs </a>
 
     <div class="dropdown">
-      <button onclick="showProfileDropdown()" class="dropbtn" ><img src="{% static "pics/profileicon.png" %}" width="40" height="40" align="right"></button>
+      <button onclick="showProfileDropdown()" class="dropbtn" ><img src="{% static "pics/profileicon.png" %}" width="40" height="40"></button>
       <div class="dropdown-content" id="profileDropdown">
         {% if user.is_authenticated %}
             <p>welcome {{ user.username }}</p>
@@ -102,7 +102,7 @@ h1, h2, h3, h4 {
 
 .topnav a {
     float: left;
-    font-size: 20px;
+    font-size: 22px;
     color: gray;
     text-align: center;
     padding: 14px 16px;
@@ -117,7 +117,7 @@ h1, h2, h3, h4 {
     /*margin-top: 20px;*/
     /*margin-left: auto;
     margin-right: auto;*/
-    padding-left: 900px;
+    padding-left: 800px;
 }
 
 .dropdown .dropbtn {
