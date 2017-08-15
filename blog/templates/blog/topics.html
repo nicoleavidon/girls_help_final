@@ -447,29 +447,29 @@ h1 {
     }
     #element1, #element3 {
       display:inline-block;
-      /*margin-right: 5px;*/
-      /*align: center;*/
-      margin-right: 10px;
-      float: left;
+      margin-right: 5px;
+      align: center;
+      /*margin-right: 10px;
+      float: left;*/
     }
     #element2, #element4 {
       display:inline-block;
       align: center;
-      float: right;
-  margin-right: 5px;
+      /*float: right;
+  margin-right: 5px;*/
     }
 
 
 .container {
   position: relative;
-  width: 800px;
+  width: 650px;
   align:center;
 }
 
 .image {
   display:inline-block;
-  width: 865px;
-  height: 720px;
+  width: 650px;
+  height: 600px;
   border: 0;
   margin: auto;
   align: center
@@ -483,8 +483,8 @@ h1 {
   top: 0;
   background-color: rgba(18,105,255,0.5);
   opacity: 0;
-  width: 865px;
-  height: 720px;
+  width: 650px;
+  height: 600px;
   transition: .5s ease;
   filter: color-dodge;
 }
@@ -513,7 +513,7 @@ h1 {
   <div id="element1">
     <div id="lifestyle" class="container">
     <a href="{% url 'lifestyle' %}" target="_blank">
-      <img src="{% static "pics/Lifestyle.jpg" %}" alt="To Lifestyle Topic" height="720px" width="865px">
+      <img src="{% static "pics/Lifestyle.jpg" %}" alt="To Lifestyle Topic" height="600px" width="650px">
 
       <div class="overlay">
         <div class="text">Lifestyle</div>
@@ -526,7 +526,7 @@ h1 {
   <div id="element2">
     <div id="health" class="container">
     <a href="{% url 'health' %}" target="_blank">
-      <img src="http://harvesthealthfoods.com/sites/default/files/Images/events/health-sign_0.jpg" alt="To Health Topic" height="720px" width="865px">
+      <img src="http://harvesthealthfoods.com/sites/default/files/Images/events/health-sign_0.jpg" alt="To Health Topic" height="600px" width="650px">
 
       <div class="overlay">
         <div class="text">Health</div>
@@ -538,7 +538,7 @@ h1 {
   <div id="element3">
     <div id="education" class="container">
     <a href="{% url 'education' %}" target="_blank">
-      <img src="http://bunkiechamber.net/sites/default/files/Education.jpg" alt="To Education Topic" height="720px" width="865px">
+      <img src="http://bunkiechamber.net/sites/default/files/Education.jpg" alt="To Education Topic" height="600px" width="650px">
 
       <div class="overlay">
         <div class="text">Education</div>
@@ -550,7 +550,7 @@ h1 {
   <div id="element4">
     <div id="tech" class="container">
     <a href="{% url 'tech' %}" target="_blank">
-      <img src="{% static "pics/Tech.jpg" %}" alt="To Technology Topic" height="720px" width="865px">
+      <img src="{% static "pics/Tech.jpg" %}" alt="To Technology Topic" height="600px" width="650px">
 
       <div class="overlay">
       <div class="text">Technology</div>

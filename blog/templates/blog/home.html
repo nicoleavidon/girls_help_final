@@ -37,7 +37,7 @@
 
 <style>
 h1 a {
-    color: #FCA205;
+    color: black;
     font-family: 'Lobster';
 }
 
@@ -168,9 +168,9 @@ h1, h2, h3, h4 {
 
 .parallax {
 /* The image used */
-background-image: url("flowers.jpg");
+background-image: url("{% static "pics/home_parallax.jpg" %}");
 /* Set a specific height */
-min-height: 300px;
+min-height: 100px;
 /* Create the parallax scrolling effect */
 background-attachment: fixed;
 background-position: center;
@@ -179,9 +179,10 @@ background-size: cover;
 }
 
 h1 {
-  color: #C8BFE7;
+  color: black;
   font-size: 50px;
   font-family: Assistant;
+  font-weight: 1000;
 }
 
 
@@ -189,6 +190,7 @@ h1 {
   color: black;
   font-family: Assistant;
   font-size: 30px;
+  /*font-weight: bold;*/
 
 }
 
@@ -230,12 +232,14 @@ h1 {
     <div>
       <img id="titlepic" src="{% static "pics/titlepic.jpeg" %}" alt="Girls Help Title" style="width=700px;height=300px;"/>
       <div class="parallax">
-      <div class="content">
-
-        <h1 style="text-align:center;">About Girls Help</h1>
-        <p id="abouttext"> We are a girls chat platform built for girls, by girls.  We are targeting girls aged 13-18 to ask questions to other girls about a wide variety of topics, including Education, Lifestyle, Health, and Tech.  Our mission is to provide an outlet for young girls to communicate with other young girls about anything they have questions.
-</p> <br> <br>
       </div>
+      <div class="content">
+<div class="parallax">
+</div>
+        <h1 style="text-align:center;">About Girls Help</h1>
+        <p id="abouttext"> We are a girls chat platform built for girls, by girls.  We are targeting girls aged 13-18 to ask questions to other girls about a wide variety of topics, including Education, Lifestyle, Health, and Technology.  Our mission is to provide an outlet for young girls to communicate with other young girls about anything they have questions.
+</p> <br> <br>
+
     </div>
     <a href="#" class="fa fa-instagram" onclick="window.open('https://www.instagram.com/wearegirlshelp/')"> </a>
     <a href="#" class="fa fa-twitter" onclick="window.open('https://www.twitter.com/GirlsHelp2/')"></a>
