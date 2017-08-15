@@ -29,7 +29,7 @@ SECRET_KEY = 'axpzvfvy#!0*fj+x_2)x=wvkru#b#jjj(^y3g14#drv=^fh))1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '<your_username>.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'girlshelp.pythonanywhere.com']
 
 
 INSTALLED_APPS = [
