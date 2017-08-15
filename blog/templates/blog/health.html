@@ -19,7 +19,6 @@
       <a href="/">Home</a>
     <a href="{% url 'post_list' %}">Feed</a>
     <a href="{% url 'topics' %}">Topics</a>
-    <a href="{% url 'faqs' %}" >FAQs </a>
 
     <div class="dropdown">
       <button onclick="showProfileDropdown()" class="dropbtn"><img src="{% static "pics/profileicon.png" %}" width="40" height="40"></button>
@@ -29,7 +28,6 @@
             <p><a href="/logout">Logout</a></p>
             {% else %}
             <p><a href="/login">Login</a></p>
-            <p><a href="/register">Signup</a></p>
             {% endif %}
 
     </div>
@@ -95,7 +93,6 @@
   p {
     font-family: Assistant;
     font-size: 20px;
-    text-align: center;
   }
 
   h1 {
@@ -182,19 +179,20 @@
 <body>
 
   <h1> Health </h1>
-  <div class="container">
 
-  {% if user.is_authenticated %}
+  <ul style="list-style-type:circle" style="font-size:155%" >
+  <p style="font-size:127%"><b> 1.</b> What color braces should I get?</p>
+  <li style="margin-left: 50px;"><p> Get any color you like! If you don&#39;t want it to be obvious, go with clear but they are a little more expensive! </p></li>
 
-  <a href="{% url 'post_new' %}" class="top-menu"><img src="http://www.free-icons-download.net/images/plus-sign-icon-27952.png" height="50" width="50"></a>
-{% endif %}
-</div>
-<div class="content container">
-  <div class="row">
-      <div class="col-md-8">
-        {% block content %}
+  <br>
 
-        {% endblock %}
-      </div>
+  <p style="font-size:127%"><b> 2.</b> I&#39;m 15 and still haven&#39;t gotten my period, what should I do?</p>
+  <li style="margin-left: 50px;"><p> You can go talk to your doctor, but it is common for people to get their period a little later than the average age. </p></li>
+  <br>
+
+  <p style="font-size:127%"><b> 3.</b> I want to lose a few pounds for summer seasons. What are some ways I can lose weight?</p>
+  <li style="margin-left: 50px;"><p> Changing your diet around to healthier options is definetely a great start.  Also, drink a lot of water. </p></li>
+
+  <br>
 
     </body>

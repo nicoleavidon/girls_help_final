@@ -15,15 +15,35 @@
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
 
+    <style>
+    body {
+      font-family: 'Assistant';
+    }
 
+    .add_comment {
+        background-color: black;
+        border: none;
+        color: white;
+        padding: 15px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+    a:hover {
+      opacity: 0.6;
+    }
+
+    </style>
     <hr>
-    <a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
+    <a class="add_comment" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
     {% for comment in post.comments.all %}
         {% if user.is_authenticated or comment.approved_comment %}
         <div class="comment">
             <div class="date">
                 {{ comment.created_date }}
-                {% if not comment.approved_comment %}              
+                {% if not comment.approved_comment %}
                     <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><img src="http://www.clker.com/cliparts/s/1/v/q/p/N/black-check-mark-md.png" height="40" width="40"></a>
                     <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><img src="http://diysolarpanelsv.com/images/clip-art-x-30.jpg" height="40" width="40"></a>
                 {% endif %}

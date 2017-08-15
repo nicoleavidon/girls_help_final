@@ -19,7 +19,6 @@
         <a href="/">Home</a>
       <a href="{% url 'post_list' %}">Feed</a>
       <a href="{% url 'topics' %}">Topics</a>
-      <a href="{% url 'faqs' %}">FAQs </a>
 
     <div class="dropdown">
       <button onclick="showProfileDropdown()" class="dropbtn" ><img src="{% static "pics/profileicon.png" %}" width="40" height="40"></button>
@@ -29,7 +28,6 @@
             <p><a href="/logout">Logout</a></p>
             {% else %}
             <p><a href="/login">Login</a></p>
-            <p><a href="/register">Signup</a></p>
             {% endif %}
 
     </div>

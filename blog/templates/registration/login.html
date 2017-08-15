@@ -164,24 +164,56 @@ span.psw {
 
 </body>
 
+
+
 </html> -->
 <!DOCTYPE html>
 <html>
 <head>
     <title>Login</title>
+    <style>
+
+    body {
+      text-align:center;
+      border:1px solid black;
+      box-sizing: border-box;
+    }
+
+    .login_button {
+        background-color: black;
+        border: none;
+        color: white;
+        padding: 15px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-left: 45px;
+    }
+
+    .text {
+      font-size: 22px;
+    }
+
+    button:hover {
+      opacity: 0.6;
+    }
+    </style>
 </head>
 <body>
+
+  <h1> Login </h1>
     <form method="POST">
         {% csrf_token %}
         <p>
-            <label>Username</label>
+            <label class="text">Username</label>
             <input type="text" name="username">
         </p>
         <p>
-            <label>Password</label>
+            <label class="text">Password</label>
             <input type="password" name="password">
         </p>
-        <button type="submit">Login</button>
+        <button type="submit" class="login_button">Login</button>
     </form>
 </body>
 </html>

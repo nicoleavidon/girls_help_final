@@ -19,7 +19,7 @@
       <a href="/" >Home</a>
     <a href="{% url 'post_list' %}">Feed</a>
     <a href="{% url 'topics' %}">Topics</a>
-    <a href="{% url 'faqs' %}" >FAQs </a>
+
 
     <div class="dropdown">
       <button onclick="showProfileDropdown()" class="dropbtn"><img src="{% static "pics/profileicon.png" %}" width="40" height="40"></button>
@@ -29,7 +29,7 @@
             <p><a href="/logout">Logout</a></p>
             {% else %}
             <p><a href="/login">Login</a></p>
-            <p><a href="/register">Signup</a></p>
+
             {% endif %}
 
     </div>
@@ -95,7 +95,6 @@
       p {
         font-family: Assistant;
         font-size: 20px;
-        text-align: center;
       }
 
       h1 {
@@ -179,5 +178,19 @@
     </head>
 
     <body>
-<h1> Tech </h1>
+<h1> Technology </h1>
     </body>
+
+    <!-- <u><a style="font-size:155%">Technology</a></u> -->
+        <ul style="list-style-type:circle" style="font-size:155%" >
+
+    <p style="font-size:127%"><b> 1.</b> I really want to learn how to code, does anyone have any programs they can recommend?</p>
+    <li style="margin-left: 50px;"><p> GIRLS WHO CODE! I was in Girls Who Code, and it was the best summer of my life! </p></li>
+<br>
+    <p style="font-size:127%"><b> 2.</b> What are some ways I can keep my iPhone battery from dying fast?</p>
+    <li style="margin-left: 50px;"><p> Turn down volume, turn off location, bluetooth, and use airplane mode. </p></li>
+<br>
+    <p style="font-size:127%"><b> 3.</b> I&#39;m the only girl in my tech class, should I quit or keep going?</p>
+    <li style="margin-left: 50px;"><p> Keep going! You deserve to be in that class just as much as any of those boys, you are gonna do great! </p></li>
+
+    <br>

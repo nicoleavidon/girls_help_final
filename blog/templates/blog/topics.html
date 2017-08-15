@@ -19,7 +19,6 @@
       <a href="/" >Home</a>
     <a href="{% url 'post_list' %}" >Feed</a>
     <a href="{% url 'topics' %}">Topics</a>
-    <a href="{% url 'faqs' %}" >FAQs </a>
 
     <div class="dropdown">
       <button onclick="showProfileDropdown()" class="dropbtn"><img src="{% static "pics/profileicon.png" %}" width="40" height="40"></button>
@@ -29,7 +28,7 @@
             <p><a href="/logout">Logout</a></p>
             {% else %}
             <p><a href="/login">Login</a></p>
-            <p><a href="/register">Signup</a></p>
+
             {% endif %}
 
     </div>
@@ -446,11 +445,18 @@ h1 {
       text-align: center;
       font-family: Assistant;
     }
-    #element1 {
-      display:inline-block; margin-right: 5px; align: center;
+    #element1, #element3 {
+      display:inline-block;
+      /*margin-right: 5px;*/
+      /*align: center;*/
+      margin-right: 10px;
+      float: left;
     }
-    #element2 {
-      display:inline-block; align: center;
+    #element2, #element4 {
+      display:inline-block;
+      align: center;
+      float: right;
+  margin-right: 5px;
     }
 
 
@@ -529,7 +535,7 @@ h1 {
   </div>
 </div>
 
-  <div id="element1">
+  <div id="element3">
     <div id="education" class="container">
     <a href="{% url 'education' %}" target="_blank">
       <img src="http://bunkiechamber.net/sites/default/files/Education.jpg" alt="To Education Topic" height="720px" width="865px">
@@ -541,7 +547,7 @@ h1 {
   </div>
 </div>
 
-  <div id="element2">
+  <div id="element4">
     <div id="tech" class="container">
     <a href="{% url 'tech' %}" target="_blank">
       <img src="{% static "pics/Tech.jpg" %}" alt="To Technology Topic" height="720px" width="865px">

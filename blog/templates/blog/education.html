@@ -18,7 +18,6 @@
       <a href="/" >Home</a>
     <a href="{% url 'post_list' %}" >Feed</a>
     <a href="{% url 'topics' %}">Topics</a>
-    <a href="{% url 'faqs' %}" >FAQs </a>
 
     <div class="dropdown">
       <button onclick="showProfileDropdown()" class="dropbtn"><img src="{% static "pics/profileicon.png" %}" width="40" height="40"></button>
@@ -28,7 +27,6 @@
             <p><a href="/logout">Logout</a></p>
             {% else %}
             <p><a href="/login">Login</a></p>
-            <p><a href="/register">Signup</a></p>
             {% endif %}
 
     </div>
@@ -95,7 +93,6 @@
       p {
         font-family: Assistant;
         font-size: 20px;
-        text-align: center;
       }
 
       h1 {
@@ -182,5 +179,19 @@
 
 
     <body>
-    <h1> Tech </h1>
+    <h1> Education </h1>
     </body>
+  <ul style="list-style-type:circle" style="font-size:155%" >
+
+    <p style="font-size:127%"><b> 1.</b> How do I decide what classes to take at school?</p>
+    <li style="margin-left: 50px;"><p>You should take classes that you're really interested in, even if you may not be in classes with your friends.</p></li>
+<br>
+    <p style="font-size:127%"><b> 2.</b>I'm really stressed about college applications.  Do you have any suggestions?</p>
+    <li style="margin-left: 50px;"><p>It is important to properly manage your time and to be aware of upcoming deadlines for applications.  Also, it is a good idea to have someone give you feedback on your essay.</p></li>
+<br>
+
+    <p style="font-size:127%"><b> 3. </b>How do I manage my schoolwork and extracurricular activities?</b> </p>
+    <li style="margin-left: 50px;"><p>It is great to be involved at school, but it is important not to overextend yourself.  Set aside time in your day for schoolwork, and make sure to stay organized!</p></li>
+
+
+    <br>

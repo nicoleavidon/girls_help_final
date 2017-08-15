@@ -1,9 +1,27 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+
+<style>
+.save_button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+button:hover {
+  opacity: 0.6;
+}
+</style>
+
     <h1>Ask a Question</h1>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
+        <button type="submit" class="save_button">Save</button>
     </form>
 {% endblock %}

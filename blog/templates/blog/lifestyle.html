@@ -18,7 +18,6 @@
       <a href="/" >Home</a>
     <a href="{% url 'post_list' %}" >Feed</a>
     <a href="{% url 'topics' %}">Topics</a>
-    <a href="{% url 'faqs' %}">FAQs </a>
 
     <div class="dropdown">
       <button onclick="showProfileDropdown()" class="dropbtn"><img src="{% static "pics/profileicon.png" %}" width="40" height="40"></button>
@@ -28,7 +27,6 @@
             <p><a href="/logout">Logout</a></p>
             {% else %}
             <p><a href="/login">Login</a></p>
-            <p><a href="/register">Signup</a></p>
             {% endif %}
     </div>
     </div>
@@ -93,7 +91,7 @@
       p {
         font-family: Assistant;
         font-size: 20px;
-        text-align: center;
+
       }
 
       h1 {
@@ -178,5 +176,28 @@
     </head>
 
     <body>
-    <h1> Tech </h1>
+    <h1> Lifestyle </h1>
     </body>
+
+    <ul style="list-style-type:circle" style="font-size:155%" >
+
+
+
+    <!-- <u><a style="font-size:155%">Lifestyle</a></u> -->
+
+      <p style="font-size:127%"><b> 1.</b> I need a new hobby, what do you suggest?</p>
+    <li style="margin-left: 50px;"><p> Going rollerskating or any kind of sport is super fun! </p></li>
+<br>
+
+    <p style="font-size:127%"><b> 2.</b> What age should I start wearing makeup?</p>
+    <li style="margin-left: 50px;"><p> Honestly, I think 15 is the best age to start because you&#39;re in highschool and you would probably know what you&#39;re doing by then LOL! </p></li>
+<br>
+
+    <p style="font-size:127%"><b> 3.</b> How often should I excersise and for how long?</p>
+
+    <li style="margin-left: 50px;"><p> If you&#39;re just starting out I would recommened 2-3 times a week and for about 30 minutes to 1 hour, whatever you&#39;re comfortable with. </p></li>
+<br>
+    <p style="font-size:127%"><b> 4.</b> How do I make friends at school?</p>
+    <li style="margin-left: 50px;"><p> The first step to making friends is being an approachable person; everyone wants new friends, so if you look like a nice and inviting person people will want to be your friend. </p></li>
+
+    <br>

@@ -2,19 +2,32 @@
 <html>
   <head>
     <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
+
+</head>
+
+<body>
+{% block content %}
 <style>
 body {
   font-family: 'Assistant';
 }
 
+.comment_button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
 </style>
-</head>
-<body>
-{% block content %}
     <h1>Add a comment</h1>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Comment</button>
+        <button type="submit" class="comment_button">Comment</button>
     </form>
 {% endblock %}
 </body>
