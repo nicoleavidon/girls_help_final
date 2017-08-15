@@ -22,13 +22,16 @@ body {
     display: inline-block;
     font-size: 16px;
 }
-
+button:hover {
+  opacity: 0.6;
+}
 </style>
     <h1>Add a comment</h1>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="comment_button">Comment</button>
     </form>
+    <br>
 {% endblock %}
 </body>
 </html>

@@ -13,6 +13,25 @@
     <script> function showProfileDropdown() {
         document.getElementById("profileDropdown").classList.toggle("show");
       }
+
+      function arianaBio() {
+    var popup = document.getElementById("Popup1");
+    popup.classList.toggle("show");
+}
+function ashleyBio() {
+var popup = document.getElementById("Popup2");
+popup.classList.toggle("show");
+}
+function cemreBio() {
+var popup = document.getElementById("Popup3");
+popup.classList.toggle("show");
+}
+
+function nicoleBio() {
+var popup = document.getElementById("Popup4");
+popup.classList.toggle("show");
+}
+
       </script>
 
       <div class="topnav" id="myTopnav">
@@ -410,6 +429,65 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-hover-theme:hover {color:#000 !important; background-color:#ffc107 !important}
 .w3-hover-text-theme:hover {color:#000000 !important}
 .w3-hover-border-theme:hover {border-color:#000000 !important}
+
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+
 </style>
   </head>
 
@@ -424,7 +502,9 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 </div>
 <br>
         <h1 style="text-align:center;"><b>About Girls Help</b></h1>
-        <p id="abouttext"> We are a girls chat platform built for girls, by girls.  We are targeting girls aged 13-18 to ask questions to other girls about a wide variety of topics, including Education, Lifestyle, Health, and Technology.  Our mission is to provide an outlet for young girls to communicate with other young girls about anything they have questions.
+        <p id="abouttext"> We are a girls chat platform built for girls, by girls.
+          We are targeting girls aged 13-18 to ask questions to other girls about a wide variety of topics, including Education,
+          Lifestyle, Health, and Technology.  Our mission is to provide a safe outlet for girls to communicate with other girls.
 </p> <br> <br>
 
     </div>
@@ -435,32 +515,36 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     <div class="w3-row"><br>
 
     <div class="w3-quarter">
-      <img src="{% static "pics/ariana.JPG" %}" height="200" width="180" class="w3-circle w3-hover-opacity">
+      <div class="popup" onclick="arianaBio()"><img src="{% static "pics/ariana.JPG" %}" height="200" width="180" class="w3-circle w3-hover-opacity">
+        <span class="popuptext" id="Popup1">ariana</span>
+      </div>
       <h3>Ariana Berry</h3>
 
-        <div id="id01" class="w3-modal">
-          <div class="w3-modal-content">
-            <div class="w3-container">
-
-            </div>
-          </div>
-        </div>
     </div>
 
     <div class="w3-quarter">
-      <img src="{% static "pics/ashley2.PNG" %}" alt="Boss" height="200" width="180" class="w3-circle w3-hover-opacity">
+      <div class="popup" onclick="ashleyBio()"><img src="{% static "pics/ashley2.PNG" %}" alt="Boss" height="200" width="180" class="w3-circle w3-hover-opacity">
+        <span class="popuptext" id="Popup2">ashley</span>
+      </div>
+
       <h3>Ashley Lagares </h3>
 
     </div>
 
     <div class="w3-quarter">
-      <img src="{% static "pics/cemre.jpg" %}" alt="Boss" height="200" width="180" class="w3-circle w3-hover-opacity">
+      <div class="popup" onclick="cemreBio()"><img src="{% static "pics/cemre.jpg" %}" alt="Boss" height="200" width="180" class="w3-circle w3-hover-opacity">
+        <span class="popuptext" id="Popup3">cemre</span>
+      </div>
+
       <h3>Cemre Tugcu</h3>
 
     </div>
 
     <div class="w3-quarter">
-      <img src="{% static "pics/nicole2.jpg" %}" alt="Boss" class="w3-circle w3-hover-opacity" height="200" width="180">
+      <div class="popup" onclick="nicoleBio()"><img src="{% static "pics/nicole2.jpg" %}" alt="Boss" class="w3-circle w3-hover-opacity" height="200" width="180">
+        <span class="popuptext" id="Popup4">nicole</span>
+      </div>
+
       <h3>Nicole Avidon</h3>
 
     </div>
