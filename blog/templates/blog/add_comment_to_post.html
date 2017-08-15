@@ -30,6 +30,7 @@ button:hover {
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="comment_button">Comment</button>
+        <br>
     </form>
     <br>
 {% endblock %}
