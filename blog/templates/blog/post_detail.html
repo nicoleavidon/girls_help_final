@@ -2,15 +2,18 @@
 
 {% block content %}
     <div class="post">
+<!-- date and time of post -->
         {% if post.published_date %}
             <div class="date">
                 {{ post.published_date }}
             </div>
         {% endif %}
+<!-- checks if user is logged in as an admin before displaying edit and remove posts buttons -->
         {% if user.is_authenticated %}
      <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><img src="https://clipartion.com/wp-content/uploads/2015/10/broken-pencil-black-and-white-clipart-free-clip-art-images.png" height="40" width="40"></a>
      <a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}"><img src="http://diysolarpanelsv.com/images/clip-art-x-30.jpg" height="40" width="40"></a>
 {% endif %}
+<!-- displays the form with title and text in text boxes! -->
         <h1>{{ post.title }}</h1>
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
@@ -37,8 +40,10 @@
 
     </style>
     <hr>
+    <!-- shows add comment button -->
     <a class="add_comment" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
     {% for comment in post.comments.all %}
+    <!-- if approved by admin, comment shows up for the public -->
         {% if user.is_authenticated or comment.approved_comment %}
         <div class="comment">
             <div class="date">

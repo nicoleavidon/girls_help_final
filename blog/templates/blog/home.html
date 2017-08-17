@@ -4,41 +4,44 @@
 <html>
   <head>
     <title>Girls Help</title>
+    <!-- Importing stylesheets, images, and google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link rel='shortcut icon' type='image/x-icon' href='{% static 'pics/ghicon.jpeg' %}' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    <script> function showProfileDropdown() {
+    <script>
+// displays dropdown for login and logout
+    function showProfileDropdown() {
         document.getElementById("profileDropdown").classList.toggle("show");
       }
-
-      function arianaBio() {
+// shows team bios through pop ups
+    function arianaBio() {
     var popup = document.getElementById("Popup1");
     popup.classList.toggle("show");
-}
-function ashleyBio() {
-var popup = document.getElementById("Popup2");
-popup.classList.toggle("show");
-}
-function cemreBio() {
-var popup = document.getElementById("Popup3");
-popup.classList.toggle("show");
-}
+    }
+    function ashleyBio() {
+    var popup = document.getElementById("Popup2");
+    popup.classList.toggle("show");
+    }
+    function cemreBio() {
+    var popup = document.getElementById("Popup3");
+    popup.classList.toggle("show");
+    }
 
-function nicoleBio() {
-var popup = document.getElementById("Popup4");
-popup.classList.toggle("show");
-}
-
+    function nicoleBio() {
+    var popup = document.getElementById("Popup4");
+    popup.classList.toggle("show");
+    }
       </script>
-
+<!-- top navigation bar (tabs) -->
       <div class="topnav" id="myTopnav">
         <a href="/">Home</a>
       <a href="{% url 'post_list' %}">Feed</a>
       <a href="{% url 'topics' %}">Topics</a>
 
+<!-- dropdown menu on top navigation bar -->
     <div class="dropdown">
       <button onclick="showProfileDropdown()" class="dropbtn" ><img src="{% static "pics/profileicon.png" %}" width="40" height="40"></button>
       <div class="dropdown-content" id="profileDropdown">
@@ -48,12 +51,10 @@ popup.classList.toggle("show");
             {% else %}
             <p><a href="/login">Login</a></p>
             {% endif %}
-
     </div>
     </div>
-
     </div>
-
+<!-- styling of website content using CSS -->
 <style>
 h1 a {
     color: black;
@@ -487,12 +488,11 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     to {opacity:1 ;}
 }
 
-
 </style>
-  </head>
-
+</head>
 
   <body>
+    <!-- displays logo on top of home page -->
     <div>
       <img id="titlepic" src="{% static "pics/titlepic.jpeg" %}" alt="Girls Help Title" style="width=700px;height=300px;"/>
       <div class="parallax">
@@ -501,73 +501,68 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 <div class="parallax">
 </div>
 <br>
-        <h1 style="text-align:center;"><b>About Girls Help</b></h1>
-        <p id="abouttext"> We are a girls chat platform built for girls, by girls.
+<!-- about Girls Help text -->
+      <h1 style="text-align:center;"><b>About Girls Help</b></h1>
+      <p id="abouttext"> We are a girls chat platform built for girls, by girls.
           We are targeting girls aged 13-18 to ask questions to other girls about a wide variety of topics, including Education,
           Lifestyle, Health, and Technology.  Our mission is to provide a safe outlet for girls to communicate with other girls.
 </p> <br> <br>
+  </div>
 
-    </div>
+<!-- horizontal rule line -->
 <hr style = "background-color:black; height:1px;">
     <div class="w3-container w3-padding-64 w3-center" id="team">
     <h1><b>The Girls Help Team</b></h1>
 
+<!-- meet the team pictures and bios -->
     <div class="w3-row"><br>
-
     <div class="w3-quarter">
       <div class="popup" onclick="arianaBio()"><img src="{% static "pics/ariana.JPG" %}" height="200" width="180" class="w3-circle w3-hover-opacity">
         <span class="popuptext" id="Popup1">Ariana attends the Academies @ Englewood. She loves beauty, fashion, and also braiding hair.</span>
       </div>
       <h3>Ariana Berry</h3>
-
     </div>
 
     <div class="w3-quarter">
       <div class="popup" onclick="ashleyBio()"><img src="{% static "pics/ashley2.PNG" %}" alt="Boss" height="200" width="180" class="w3-circle w3-hover-opacity">
         <span class="popuptext" id="Popup2">Ashley attends St.Stephen's Episcopal School in Austin,TX. She enjoys playing soccer and lacrosse.</span>
       </div>
-
       <h3>Ashley Lagares </h3>
-
     </div>
 
     <div class="w3-quarter">
       <div class="popup" onclick="cemreBio()"><img src="{% static "pics/cemre.jpg" %}" alt="Boss" height="200" width="180" class="w3-circle w3-hover-opacity">
         <span class="popuptext" id="Popup3">Cemre goes to Tenafly High School in New Jersey. She loves to draw, write, read, animate, and travel; and enjoys most classes in school, especially biology, history, and languages!</span>
       </div>
-
       <h3>Cemre Tugcu</h3>
-
     </div>
 
     <div class="w3-quarter">
       <div class="popup" onclick="nicoleBio()"><img src="{% static "pics/nicole2.jpg" %}" alt="Boss" class="w3-circle w3-hover-opacity" height="200" width="180">
         <span class="popuptext" id="Popup4">Nicole attends Syosset High School in Long Island. She likes to ski and travel, and her favorite subject in school is math.</span>
       </div>
-
       <h3>Nicole Avidon</h3>
-
-    </div>
-
     </div>
     </div>
-
+    </div>
 
 <br>
 <br>
+<!-- back to top button -->
       <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
         <a class="w3-button w3-theme" href="/"><span class="w3-xlarge">
         <i class="fa fa-chevron-circle-up"></i></span></a>
       </div>
 
+<!-- footer on bottom of web pages with contact buttons -->
     <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
-<h4 style="font-size:30px;">Contact Girls Help</h4>
+    <h4 style="font-size:30px;">Contact Girls Help</h4>
     <a href="#" class="fa fa-instagram" onclick="window.open('https://www.instagram.com/wearegirlshelp/')"> </a>
     <a href="#" class="fa fa-twitter" onclick="window.open('https://www.twitter.com/GirlsHelp2/')"></a>
     <a href="#" class="fa fa-facebook" onclick="window.open('https://www.facebook.com/Girls-Help-329781417475012/')"></a> <br>
     Email us @ <a href="mailto:wearegirlshelp@gmail.com">wearegirlshelp@gmail.com </a>
-
 </a>
 </footer>
-  </body>
+
+</body>
 </html>
